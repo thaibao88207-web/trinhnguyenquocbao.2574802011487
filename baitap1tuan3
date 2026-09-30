@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Dangky.html</title>
+</head>
+<body>
+<h2>Bai1</h2>
+          <table>
+                    <form>
+                              <tr>
+                                        <td>
+                                                  <label for="">Enter name:</label>
+                                        </td>
+                                        <td>
+                                                  <input type="text">
+                                        </td>
+                              </tr>
+                              <tr>
+                                        <td>
+                                                  <label for="">Enter password:</label>
+                                        </td>
+                                        <td>
+                                                  <input type="password">
+                                        </td>
+                              </tr>
+                              <tr>
+                                        <td>
+                                                  <label for="">Enter Email:</label>
+                                        </td>
+                                        <td>
+                                                  <input type="text">
+                                        </td>
+                              </tr>
+                              <tr>
+                                        <td><label for="">Enter Gender:</label></td> <br>
+                                        <td>
+                                                  <label>male<input name="role" type="radio"></label>
+                                                  <label>female<input name="role" type="radio"></label>
+                                        </td>
+                              </tr>
+                              <tr>
+                                        <td>
+                                            <label for="">Select Country:</label>
+                                        </td>
+                                        <td>
+                                                  <select>
+                                                            <option>India</option>
+                                                            <option>Singapore</option>
+                                                            <option>US</option>
+                                                            <option>Vietnam</option>
+                                                            <option>Uk</option>
+                                                  </select>
+                                        </td>
+                              </tr>
+                              <td></td>
+                              <td>
+
+                                        <input type="submit" value="register">
+                              </td>
+                    </form>
+          </table>
+</body>
+</html>
