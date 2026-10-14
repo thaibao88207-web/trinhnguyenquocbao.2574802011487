@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xúc xắc may mắn</title>
+</head>
+<body>
+    <h2>TRO CHOI XUC XAC MAY MAN</h2>
+    <button onclick="lacXucXac()">Lắc Xúc Xắc</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function lacXucXac(){
+            let soXucXac = Math.floor(Math.random() * 6) + 1;
+            let thongBao = "Kết quả lắc xúc xắc: <b>" + soXucXac + " chấm</b>";
+            document.getElementById("ketqua").innerHTML = thongBao;
+        }
+    </script>
+</body>
+</html>

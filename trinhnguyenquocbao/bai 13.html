@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <h2>CHUYEN DOI NHIET DO</h2>
+    <label>Nhập nhiệt độ (°C):</label>
+    <input type="number" id="celsius">
+    <br><br>
+    <button onclick="chuyenDoi()">Chuyển Đổi</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function chuyenDoi(){
+            let c = Number(document.getElementById("celsius").value);
+
+            let f = (9 / 5) * c + 32;
+
+            document.getElementById("ketqua").innerHTML = c + " °C bằng <b>" + f + " °F</b>";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quay thưởng may mắn</title>
+</head>
+<body>
+    <h2>CHUONG TRINH QUAY THUONG MAY MAN</h2>
+    <button onclick="quayThưởng()">Quay Thưởng</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function quayThưởng(){
+
+            let danhSachQua = [
+                "1 chiếc Xe máy SH", 
+                "1 chiếc Điện thoại iPhone", 
+                "1 chiếc Laptop", 
+                "100.000 VNĐ tiền mặt", 
+                "1 ly trà sữa", 
+                "Chúc bạn may mắn lần sau!"
+            ];
+
+            let viTriNgauNhien = Math.floor(Math.random() * danhSachQua.length);
+            let phanQua = danhSachQua[viTriNgauNhien];
+
+            document.getElementById("ketqua").innerHTML = 
+                "🎉 Chúc mừng! Bạn quay trúng phần quà: <b>" + phanQua + "</b>";
+        }
+    </script>
+</body>
+</html>

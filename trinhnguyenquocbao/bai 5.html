@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đoán số may mắn</title>
+</head>
+<body>
+    <h2>CHUONG TRINH DOAN SO MAY MAN</h2>
+    <label for="">Nhập số bạn đoán (1 - 10):</label>
+    <input type="number" id="somayman">
+    <br><br>
+    <button onclick="doanso()">Đoán Số</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function doanso(){
+            let soNguoiDung = document.getElementById("somayman").value;
+            
+            let soMay = Math.floor(Math.random() * 10) + 1;
+            
+            let ketqua = "";
+
+            if (soNguoiDung >= 1 && soNguoiDung <= 10) {
+                if (Number(soNguoiDung) === soMay) {
+                    ketqua = "Chúc mừng! Bạn đã đoán trúng số may mắn: " + soMay;
+                } else {
+                    ketqua = "Chưa may mắn rồi! Số của máy là: " + soMay;
+                }
+            } else {
+                ketqua = "Vui lòng nhập số từ 1 đến 10!";
+            }
+
+            document.getElementById("ketqua").innerHTML = ketqua;
+        }
+    </script>
+</body>
+</html>

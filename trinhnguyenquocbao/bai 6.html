@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò chơi Oẳn tù tì</title>
+</head>
+<body>
+    <h2>TRO CHOI OAN TU TI</h2>
+    <p>Chọn một trong ba:</p>
+    
+    <button onclick="choi('Đá')">Đá</button>
+    <button onclick="choi('Giấy')">Giấy</button>
+    <button onclick="choi('Kéo')">Kéo</button>
+
+    <p id="ketqua"></p>
+
+    <script>
+        function choi(nguoiChon) {
+            let luaChonMay = ['Đá', 'Giấy', 'Kéo'];
+            let viTriNgauNhien = Math.floor(Math.random() * 3);
+            let mayChon = luaChonMay[viTriNgauNhien];
+
+            let ketqua = "";
+            if (nguoiChon === mayChon) {
+                ketqua = "Hòa nhau!";
+            } else if (
+                (nguoiChon === 'Đá' && mayChon === 'Kéo') ||
+                (nguoiChon === 'Giấy' && mayChon === 'Đá') ||
+                (nguoiChon === 'Kéo' && mayChon === 'Giấy')
+            ) {
+                ketqua = "Bạn đã thắng!";
+            } else {
+                ketqua = "Bạn đã thua!";
+            }
+            document.getElementById("ketqua").innerHTML = 
+                "Bạn chọn: <b>" + nguoiChon + "</b><br>" +
+                "Máy chọn: <b>" + mayChon + "</b><br>" +
+                "Kết quả: <b>" + ketqua + "</b>";
+        }
+    </script>
+</body>
+</html>

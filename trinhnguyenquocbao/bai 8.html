@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự đoán nghề nghiệp</title>
+</head>
+<body>
+    <h2>CHUONG TRINH DU DOAN NGHE NGHIEP</h2>
+    <label for="">Nhập tên của bạn:</label>
+    <input type="text" id="hoten">
+    <br><br>
+    <button onclick="duDoan()">Dự Đoán</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function duDoan(){
+            let ten = document.getElementById("hoten").value;
+
+            if (ten === "") {
+                document.getElementById("ketqua").innerHTML = "Vui lòng nhập tên của bạn trước nhé!";
+                return;
+            }
+
+            let danhSachNghe = [
+                "Lập trình viên IT", 
+                "Giáo viên", 
+                "Bác sĩ", 
+                "Doanh nhân thành đạt", 
+                "Ca sĩ nổi tiếng", 
+                "Phi công", 
+                "Đầu bếp chuyên nghiệp", 
+                "Nhà thiết kế thời trang"
+            ];
+
+            let viTriNgauNhien = Math.floor(Math.random() * danhSachNghe.length);
+            let ngheNghiep = danhSachNghe[viTriNgauNhien];
+
+            document.getElementById("ketqua").innerHTML = 
+                "Xin chào <b>" + ten + "</b>!<br>" +
+                "Nghề nghiệp tương lai của bạn là: <b>" + ngheNghiep + "</b>";
+        }
+    </script>
+</body>
+</html>
